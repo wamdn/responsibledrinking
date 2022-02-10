@@ -1,0 +1,235 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body, html, header{
+	height: 100%;
+	text-align: center;
+}
+
+/*/////////font/////////*/
+li{
+	text-align: left;
+}
+a{
+	text-decoration:none; 	
+}
+p{
+	line-height:32px;
+}
+h1,h2,p,a{
+	font-family: Raleway, sans-serif;
+}
+h1{
+	font-size: 60px;	
+}
+h2{
+	font-size: 40px;
+}
+/*/////////burger menu/////////*/
+
+.burger-menu{
+	position: fixed;
+	height: 36px;
+	width: 40px;
+	background: black;
+	top:30px;
+	left: 30px;
+	border: none;
+	z-index: 10;
+	cursor: pointer;
+}
+.burger-menu div{
+	position: absolute;
+	border: 1px solid white;
+	width: 28px;
+	left:50%;
+	transform: translate(-50%,0);
+}
+.burger-menu div:first-child{
+	top:30%;
+}
+.burger-menu div:first-child+div{
+	top:50%;
+}
+.burger-menu div:last-child{
+	top:70%;
+}
+
+/*/////////button/////////*/
+.button{
+	text-transform: uppercase;	
+	border:2px solid;
+	border-radius: 3px;
+	font-style: normal;
+	font-size: 12px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	padding: 15px 25px;
+	line-height: 70px;
+	transition: .2s ease-in-out;
+
+}
+.button-border-white{
+	color: white;
+	border-color: white;
+}
+.button-border-white:hover{
+	color: black;
+	background: white;
+}
+.button-border-black{
+	color: black;
+	border-color: black;
+}
+.button-border-black:hover{
+	color: white;
+	background: black;
+}
+
+/*//////////////////header//////////////////*/
+header{
+	background: url('../img/header.jpg');
+	background-size: cover;
+	color: white;	
+}
+.filtre-noir::before{
+	content: '';
+	position: absolute;
+	top: 0;	
+	left: 0;	
+	width: 100%;
+	height: 100%;
+	background:rgba(0,0,0,0.3);
+}
+.welcome-link{
+	position: relative;
+	margin: 20px 0;
+	display: inline-block;
+	color: white;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+.welcome-txt{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+}
+.arrow::after{
+	content: '';
+	background: url('../img/arrow.png');
+	width: 37px;	
+	height: 23px;	
+	position: absolute;	
+	left: 50%;	
+	top: 103%;	
+	transform: translate(-50%);
+	z-index: 5;
+}
+
+/*//////////////////Key Facts//////////////////*/
+.key-facts{
+	max-width: 1080px;
+	margin: 0 auto;
+	padding:80px 0;
+
+}
+hr{
+	display: inline-block;
+	width: 1050px;
+	border-top: 1px solid #ccc;
+	margin-bottom: 50px; 
+}
+.thumbnail{
+	width: 33%;
+	display: inline-block;
+	padding: 10px;
+	vertical-align: top;
+}
+.thumbnail img{
+	width: 100%;
+}
+/*//////////////////Tips and Tricks//////////////////*/
+.tips, .us{
+	position: relative;
+	background-size: cover;
+	height: 640px;
+	color: white;
+}
+.tips{
+	background: url('../img/train.jpg');
+}
+/*//////////////////About us//////////////////*/
+.us{
+	background: url('../img/barel.jpg');
+}
+/*//////////////////Country Information//////////////////*/
+.country{
+	position: relative;
+	height: 889px;
+}
+.country-txt{
+	width: 1080px;
+	position: absolute;
+	top: 80px;
+	left:50%;
+	transform: translate(-50%,0);
+}
+.country-txt p{
+	padding:0 150px 50px;
+}
+.column{
+	column-count:3;
+	column-gap: 20px;
+	line-height: 40px;
+}
+
+.column ul {
+	list-style-type: none;
+}
+ 
+.column ul li:before {
+	content: "\2022";
+	font-size: 28px;
+	margin-right: 10px;
+	position: relative;
+	top: 5px;
+	color: rgba(0,0,0,.6);
+}
+
+.map{
+	float: left;
+	height: 333px;
+}
+.map img{
+   	height: 100%;
+}
+.column::after{
+	content: '';
+	display: block;
+	clear: both;
+}
+
+/*//////////////////footer//////////////////*/
+footer{
+	padding: 80px 0;
+}
+.footer-link a{
+	display: inline-block;
+	margin: 0 20px;
+	color: black;
+}
+footer div+p{
+	font-size: 12px;
+}
+footer p>a{
+	color: black;
+	border-bottom: 1px solid rgba(22,24,26,.3);
+}
+footer p>a:hover{
+	color: black;
+	border-bottom: 1px solid black;
+}
